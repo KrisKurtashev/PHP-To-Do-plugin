@@ -1,0 +1,17 @@
+{
+    "name": "vendor-blue-window/bw-to-do-list",
+    "description": "Wordpress To Do list",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Kristian Kurtashev",
+            "email": "kristian.borisov.kurtashev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

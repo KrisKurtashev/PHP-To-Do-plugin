@@ -1,0 +1,83 @@
+/**
+* @package bwtodolist
+*/
+.bw-todo {
+    margin:1rem;
+
+    & .todo-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* reorder admin panel for extra cols */
+        &.admin {
+            & li {
+                grid-template-columns: 2rem 5rem 15rem 12rem 12rem 5rem;
+            }
+        }
+
+        & li {
+            display: grid;
+            gap: 0.5rem 1rem;
+            grid-template-columns: 2rem 5rem 15rem 12rem 12rem;
+            justify-content: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+
+        @media (max-width: 1024px) {
+            
+            & li:first-child {
+                display: none;
+            }
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1.5rem;
+
+                & div {
+                    position: relative;
+                    padding-left: 6rem;
+
+                }
+
+                & div:before {
+                    position: absolute;
+                    content: attr(data-name);
+                    left: 0;
+                    top: 0;
+                }
+            }   
+        }
+    }
+}
+.addTask{
+    margin-left: 92.5%;
+}
+.desc{
+    font-size: small;
+}
+
+.title{
+    font-weight: bold;
+    font-size: large;
+    color:black;
+}
+
+.danger{
+    color:red;
+}
+
+.info{
+    color:#B7950B;
+}
+.success{
+    color:green;
+}
+
+.bold{
+    font-weight: bolder;
+}
